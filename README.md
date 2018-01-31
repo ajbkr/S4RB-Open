@@ -11,7 +11,7 @@ $ npm install -g json-server
 $ json-server --watch db.json
 ```
 
-## 1. Develop a basic reporting portal using Angular or React.
+## 1. Develop a basic reporting portal using any suitable frameworks, such as Angular or React, that you see fit.
 
 ![Example Reporting Portal](/example-2.png "Example Reporting Portal")
 
@@ -23,11 +23,11 @@ For example:
 
 |Month       | CPMU|
 |---------- | ----------|
-|01 January 2012|	5.47|
-|01 February 2012|	57.66|
-|01 March 2012|	12.13|
-|01 May 2012|	67.78|
-|01 June 2012|	93.68|
+|January 2012|	5.47|
+|February 2012|	57.66|
+|March 2012|	12.13|
+|May 2012|	67.78|
+|June 2012|	93.68|
 
 ## 3. Allow the ability for the user to toggle Quarter and Month aggregation.
 
@@ -43,22 +43,13 @@ For example:
 
 For example:
 
-Month       | Amounts
----------- | ----------|
-|01 February 2012|	57.66|
-|01 March 2012|	12.13|
-|01 May 2012|	67.78|
-|01 June 2012|	93.68|
-
-Should be displayed as:
-
-|Month       | Amounts
+|Month       | CPMU
 |---------- | ----------|
-|01 February 2012|	57.66|
-|01 March 2012|	12.13|
-|01 April 2012|	0.00|
-|01 June 2012|	93.68|
-|01 July 2012|	57.30|
+|February 2012|	57.66|
+|March 2012|	12.13|
+|April 2012|	0.00|
+|June 2012|	93.68|
+|July 2012|	57.30|
 
 ## 5. Add any tests you see fit to cover your code and any key manipulations you have performed
 
