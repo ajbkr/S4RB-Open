@@ -10,6 +10,8 @@ $ npm i
 $ npm run server
 ```
 
+The server will be accessible at `http://localhost:3000`
+
 ## 1. Update the GET /data/cpmu route in the express server to return JSON
 
 - The route or application should read the data from the CSV file and convert it to JSON.
