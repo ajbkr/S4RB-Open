@@ -46,7 +46,12 @@ For example:
 |June 2012|	93.68|
 |July 2012|	57.30|
 
-## 3. Allow the ability for the user to toggle Quarter and Month aggregation
+## 4. Develop a basic reporting portal using a suitable framework
+- For example: Angular, Angular.JS or React
+
+![Example Reporting Portal](/example-2.png "Example Reporting Portal")
+
+## 5. Allow the ability for the user to toggle Quarter and Month aggregation
 
 - You may choose how to implement this.
 
