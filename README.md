@@ -1,18 +1,9 @@
 # Interview Questions #
 
 Imagine you have been tasked by the Account Manager to create a basic reporting application that will allow the account manager to view complaints via a online portal.
-The company already has an express server that stores all the complaints that the business has recieved and the number of corresponding sales in that period.
+The company has provided you with a CSV file with all the complaints that the business has recieved and the number of corresponding sales in that period.
 
-The back-end server can be run locally using the following commands:
-
-```shell
-$ npm i
-$ npm run server
-```
-
-The server will be accessible at `http://localhost:3000`
-
-## 1. Update the GET /data/cpmu route in the express server to return JSON
+## 1. Create an express app with a GET /data/cpmu route
 
 - The route or application should read the data from the CSV file and convert it to JSON.
 - Your solution should include a test for the correct conversion of the data to JSON.
@@ -69,5 +60,4 @@ Hopefully, completing the test itself shouldn’t be too difficult, but to help:
 - The file `interview.xlsx` has been provided by the project manager as an example of correct calculations.
 - We are looking for how you approach the project, the tests you put in place, the structure of your code etc.
 - You should approach this as if it were part of much bigger interconnected project.
-- The project manager is concious of the development budget, so your solution should be economical without compromising quality while delivering all the requirements.
-- There are no prizes for finishing quickly.
+- The project manager is conscious of the development budget, so your solution should be economical without compromising quality while delivering all the requirements.
