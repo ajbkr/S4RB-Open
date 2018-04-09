@@ -1,0 +1,27 @@
+{
+  "name": "s4rb-open",
+  "version": "1.0.0",
+  "description": "S4RB Test for new applicants",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "server": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/S4RB/S4RB-Open.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/S4RB/S4RB-Open/issues"
+  },
+  "homepage": "https://github.com/S4RB/S4RB-Open#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.3"
+  }
+}

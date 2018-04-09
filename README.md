@@ -1,23 +1,25 @@
 # Interview Questions #
 
 Imagine you have been tasked by the Account Manager to create a basic reporting application that will allow the account manager to view complaints via a online portal.
-The company already has a public JSON REST API that stores all the complaints that the business has recieved and the number of corresponding sales in that period.
+The company already has an express server that stores all the complaints that the business has recieved and the number of corresponding sales in that period.
 
-The back-end server that provides the public API can be hosted locally using the following commands:
+The back-end server can be run locally using the following commands:
 
 ```shell
-$ npm install -g json-server
-
-$ json-server --watch db.json
+$ npm i
+$ npm run server
 ```
 
-## 1. Develop a basic reporting portal using any suitable frameworks, such as Angular or React
+## 1. Update the GET /data/cpmu route in the express server to return JSON
 
-![Example Reporting Portal](/example-2.png "Example Reporting Portal")
+- The route or application should read the data from the CSV file and convert it to JSON.
+- Your solution should include a test for the correct conversion of the data to JSON.
 
-## 2. Add a view that shows the months and the calculated value CPMU
+## 2. Update the route to additionally calculate "CPMU"
 
-CPMU = Complaints per million units.
+- CPMU = Complaints per million units
+- The calculation should happen server-side
+- Add any tests, if necessary
 
 For example:
 
@@ -29,7 +31,24 @@ For example:
 |May 2012|	67.78|
 |June 2012|	93.68|
 
+## 3. Update the route to fill-in missing data when not available
+
+- These values should be displayed as "No Value"
+- Add any tests, if necessary
+
+For example:
+
+|Month       | CPMU|
+|---------- | ----------|
+|February 2012|	57.66|
+|March 2012|	12.13|
+|April 2012|	No Value |
+|June 2012|	93.68|
+|July 2012|	57.30|
+
 ## 3. Allow the ability for the user to toggle Quarter and Month aggregation
+
+- You may choose how to implement this.
 
 For example:
 
@@ -38,24 +57,10 @@ For example:
 | 2012 |1|	7.19|
 | 2012 |2|	82.69|
 
-
-## 4. Within the report there are missing months when data are not available, these values should be displayed as "No Value"
-
-For example:
-
-|Month       | CPMU
-|---------- | ----------|
-|February 2012|	57.66|
-|March 2012|	12.13|
-|April 2012|	No Value |
-|June 2012|	93.68|
-|July 2012|	57.30|
-
-## 5. Add any tests you see fit to cover your code and any key manipulations you have performed
-
 # The Test #
 Hopefully, completing the test itself shouldn’t be too difficult, but to help:
 - The file `interview.xlsx` has been provided by the project manager as an example of correct calculations.
 - We are looking for how you approach the project, the tests you put in place, the structure of your code etc.
 - You should approach this as if it were part of much bigger interconnected project.
-- The project manager is concious of the development budget, so your solution should be economical without compromising quality; there are no prizes for finishing quickly.
+- The project manager is concious of the development budget, so your solution should be economical without compromising quality while delivering all the requirements.
+- There are no prizes for finishing quickly.
