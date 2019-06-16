@@ -34,13 +34,27 @@ router.get('/cpmu/json', (req, res) => {
 
   const complaints = csvjson.toObject(data, options)
   const cpmu = complaints.map(
-    ({ Month: month, Complaints: complaints, UnitsSold: unitsSold }) => ({
-      CPMU: (complaints / unitsSold * 1000000).toFixed(5),
-      Month: new Date(month).toLocaleDateString('en-GB', {
-        month: 'long',
-        year: 'numeric'
-      })
-    })
+    ({ Complaints, Month, UnitsSold }) => {
+      const complaints = parseInt(Complaints)
+      const unitsSold = parseInt(UnitsSold)
+
+      const cpmu = (Number.isInteger(complaints) && Number.isInteger(unitsSold))
+        ? (complaints / unitsSold * 1000000).toFixed(5) : 'No Value'
+
+      const millis = Date.parse(Month)
+
+      const month = !isNaN(millis)
+        ? new Date(millis).toLocaleDateString('en-GB', {
+          month: 'long',
+          year: 'numeric'
+        })
+        : 'No Value'
+
+      return {
+        CPMU: cpmu,
+        Month: month
+      }
+    }
   )
   res.json(cpmu)
 })
